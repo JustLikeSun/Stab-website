@@ -21,7 +21,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anubi — Creative Studio",
+  title: "STAB - Creative Agency",
   description: "Creative production studio for CGI, 3D and motion.",
 };
 
