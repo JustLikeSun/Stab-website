@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "name": "anubi-extracted-tokens",
+    "source": "mirrored anubi.io css/html",
+    "version": "0.1.0"
+  },
+  "color": {
+    "surface": {
+      "page": "#0a0a0a",
+      "sectionDarkA": "#0b0b0c",
+      "sectionDarkB": "#0d0d0d",
+      "panelDark": "#111111",
+      "panelLight": "#fcfcfc"
+    },
+    "text": {
+      "primaryOnDark": "#ffffff",
+      "primaryOnLight": "#000000",
+      "mutedOnDark": "#cfcfcf",
+      "mutedOnLight": "#4d4d4d"
+    },
+    "border": {
+      "subtleDark": "rgba(255,255,255,0.08)",
+      "subtleLight": "#eaeaea"
+    },
+    "overlay": {
+      "dark04": "rgba(0,0,0,0.04)",
+      "dark12": "rgba(0,0,0,0.12)",
+      "dark24": "rgba(0,0,0,0.24)",
+      "dark58": "rgba(0,0,0,0.58)",
+      "dark86": "rgba(0,0,0,0.86)"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "body": "'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "display": "'Epilogue', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "mono": "'IBM Plex Mono', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace"
+    },
+    "fontWeight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "fontSize": {
+      "bodyFluid": "clamp(1rem,1.35vw,1.2rem)",
+      "uiFluid": "clamp(15px,1.25vw,18px)",
+      "titleFluid": "clamp(1.45rem,2.45vw,2.35rem)",
+      "heroFluid": "clamp(2.75rem,6vw,5.5rem)",
+      "marqueeFluid": "clamp(4.6rem,15vw,12rem)"
+    },
+    "lineHeight": {
+      "tight": 0.9,
+      "display": 0.96,
+      "body": 1.45
+    },
+    "letterSpacing": {
+      "displayTight": "-0.06em",
+      "sectionTight": "-0.04em",
+      "eyebrow": "0.2em"
+    }
+  },
+  "layout": {
+    "container": {
+      "maxPrimary": "1200px",
+      "maxWide": "1400px",
+      "gutterDesktop": "clamp(16px,3.25vw,36px)",
+      "gutterNarrow": "12px"
+    },
+    "sectionPadding": {
+      "standardY": "clamp(40px,6vw,82px)",
+      "largeY": "clamp(52px,6.5vw,96px)"
+    },
+    "radius": {
+      "sm": "8px",
+      "md": "12px",
+      "lg": "16px",
+      "pill": "999px"
+    },
+    "borderWidth": {
+      "hairline": "1px"
+    }
+  },
+  "motion": {
+    "duration": {
+      "fast": "180ms",
+      "base": "260ms",
+      "slow": "420ms"
+    },
+    "easing": {
+      "standard": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+      "smooth": "cubic-bezier(0.22, 1, 0.36, 1)"
+    },
+    "reveal": {
+      "translateY": "20px",
+      "duration": "800ms"
+    }
+  },
+  "zIndex": {
+    "header": 50,
+    "mobileMenu": 50,
+    "cookieBanner": 100
+  }
+}
