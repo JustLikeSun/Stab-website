@@ -25,6 +25,17 @@ npm run build
 npm start
 ```
 
+## Vercel & custom domain (`stab.agency`)
+
+DNS is working when requests reach Vercel (you see `server: Vercel` and often a redirect from apex → `www`). If the site shows **“The page could not be found”** / **`NOT_FOUND`**, the domain is not backed by a **successful Production deployment** for this repo—usually a dashboard setting, not app code.
+
+1. **Project → Settings → General → Root Directory** — leave **empty** (repo root). If it still says `anubi-next` from an old layout, builds fail and nothing is served on your domain.
+2. **Deployments** — open the latest **Production** deploy; it must be **Ready** (green). If it’s failed, read the build log (missing `package.json` / wrong root is the common fix).
+3. **Settings → Domains** — `stab.agency` and `www.stab.agency` must be on **this** project and show **Valid**.
+4. After fixing root directory, click **Redeploy** on the latest commit (or push an empty commit) so Production updates.
+
+Your `*.vercel.app` preview URL should return **200** for `/` when the project is healthy; if that URL is also 404, fix deployments first, then the custom domain will follow.
+
 ## Layout
 
 | Path | Purpose |
