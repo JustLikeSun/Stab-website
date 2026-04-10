@@ -24,7 +24,7 @@ export function SiteFooter() {
         <div className="footer-col">
           <h4 className="footer-heading">Contact</h4>
           <div className="footer-nav">
-            <a href="mailto:hello@anubi.io">hello@anubi.io</a>
+            <a href="mailto:contact@stab.agency">contact@stab.agency</a>
           </div>
         </div>
         <div className="footer-col footer-col-end">

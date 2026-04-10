@@ -20,7 +20,9 @@ export async function generateMetadata({
   const p = getWorkProject(slug);
   if (!p) return { title: "Work" };
   return {
-    title: `${p.title} | STAB`,
+    title: {
+      absolute: `${p.title} | Stab`,
+    },
     description: p.description,
     openGraph: p.ogImage
       ? { images: [{ url: p.ogImage, alt: `${p.title} cover` }] }

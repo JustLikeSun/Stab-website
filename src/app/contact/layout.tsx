@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Anubi | Contact us",
-  description: "Get in touch with Anubi for CGI, 3D, motion and creative production.",
+  title: "Contact us",
+  description: "Get in touch with Stab for CGI, 3D, motion and creative production.",
   openGraph: {
-    title: "Anubi | Contact us",
-    description: "Get in touch with Anubi for CGI, 3D, motion and creative production.",
+    title: "Stab | Contact us",
+    description: "Get in touch with Stab for CGI, 3D, motion and creative production.",
   },
 };
 

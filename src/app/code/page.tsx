@@ -175,7 +175,7 @@ export default function CodePage() {
           <div className="contact-cta-wrap">
             <ContactCtaButton />
           </div>
-          <p className="contact-email">or reach out via email at <a href="mailto:hello@anubi.io">hello@anubi.io</a></p>
+          <p className="contact-email">or reach out via email at <a href="mailto:contact@stab.agency">contact@stab.agency</a></p>
         </div>
       </section>
     </main>

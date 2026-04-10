@@ -218,7 +218,7 @@ export function WorkCaseView({
           </div>
           <p className="contact-email">
             or reach out via email at{" "}
-            <a href="mailto:hello@anubi.io">hello@anubi.io</a>
+            <a href="mailto:contact@stab.agency">contact@stab.agency</a>
           </p>
         </div>
       </section>

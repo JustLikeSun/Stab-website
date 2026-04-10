@@ -22,7 +22,10 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "STAB - Creative Agency",
+  title: {
+    default: "Stab | Creative Agency",
+    template: "Stab | %s",
+  },
   description: "Creative production studio for CGI, 3D and motion.",
 };
 

@@ -282,7 +282,7 @@ export default function Home() {
           </div>
           <div className="contact-alt">
             <p className="contact-alt-title">or reach out via email at</p>
-            <a href="mailto:hello@anubi.io" className="contact-alt-email"><span>hello@anubi.io</span></a>
+            <a href="mailto:contact@stab.agency" className="contact-alt-email"><span>contact@stab.agency</span></a>
           </div>
         </div>
       </section>

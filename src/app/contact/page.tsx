@@ -35,8 +35,8 @@ export default function ContactPage() {
           <>
             <div className="contact-page-sendmail reveal">
               <p className="contact-page-kicker">Contact us at</p>
-              <a href="mailto:hello@anubi.io" className="contact-page-mail">
-                hello@anubi.io
+              <a href="mailto:contact@stab.agency" className="contact-page-mail">
+                contact@stab.agency
               </a>
               <p className="contact-page-sub">or fill out the form</p>
             </div>

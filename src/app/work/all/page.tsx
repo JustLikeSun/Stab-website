@@ -3,13 +3,13 @@ import { getWorkListing } from "@/data/work-projects";
 import { WorkAllView } from "./work-all-view";
 
 export const metadata: Metadata = {
-  title: "Anubi | Work",
+  title: "Work",
   description:
-    "Explore all work by Anubi, an Italian creative studio focused on CGI, 3D motion, AI and creative websites.",
+    "Explore all work by Stab — creative production for CGI, 3D motion, AI and digital experiences.",
   openGraph: {
-    title: "Anubi | Work",
+    title: "Stab | Work",
     description:
-      "Explore all work by Anubi, an Italian creative studio focused on CGI, 3D motion, AI and creative websites.",
+      "Explore all work by Stab — creative production for CGI, 3D motion, AI and digital experiences.",
   },
 };
 
