@@ -12,9 +12,11 @@ Location: [`public/brand-assets/_next/static/media`](public/brand-assets/_next/s
   - Current usage: header brand icon
   - File: [`src/components/site-header.tsx`](../src/components/site-header.tsx)
 
-- `stab-footer.9e2d2407.svg`
-  - Current usage: footer brand lockup
-  - File: [`src/components/site-footer.tsx`](../src/components/site-footer.tsx)
+- `stab.svg` (in [`public/brand-assets/`](../public/brand-assets/))
+  - Current usage: hero kinetic wordmark + footer wordmark
+  - Files: [`src/components/kinetic-lines.tsx`](../src/components/kinetic-lines.tsx), [`src/components/site-footer.tsx`](../src/components/site-footer.tsx)
+
+- `stab-footer.9e2d2407.svg` (older single-path wordmark; unused by app — prefer `stab.svg`)
 
 ### Interaction/media icons
 

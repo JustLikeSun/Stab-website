@@ -2,6 +2,8 @@
 
 This document captures the extracted visual system used as the baseline for the Stab site and translates it into reusable implementation guidance.
 
+**Related:** [`DESIGN.md`](../DESIGN.md) (Stitch-style, AI-oriented summary with exact colors) · [`DESIGN_SOURCES.md`](DESIGN_SOURCES.md) (what to update when the site changes) · [`design-tokens.json`](design-tokens.json) (structured tokens).
+
 ## Brand Character
 
 - **Tone:** premium, cinematic, minimalist, technical
