@@ -65,7 +65,7 @@ export default function CodePage() {
             </div>
             <div className="two-col-right">
               <p className="inner-body">
-                Anubi develops premium websites and interactive platforms with the same
+                Stab develops premium websites and interactive platforms with the same
                 attention we bring to our visual production: pacing, structure, rhythm,
                 typography, motion and control. The result is not generic development work,
                 but high-end digital experiences built to support brand perception and real
@@ -121,7 +121,7 @@ export default function CodePage() {
           </div>
           <Link href="/work/red-studio-creative-website" className="work-card" style={{ display: "block", maxWidth: 800 }}>
             <Image
-              src="/assets/anubi-cdn/5337f568925cf43e80caeaa1611dab578d90f0d1-3072x1728-w2200.webp"
+              src="/assets/media-cdn/5337f568925cf43e80caeaa1611dab578d90f0d1-3072x1728-w2200.webp"
               alt="Code project"
               width={1920}
               height={1080}

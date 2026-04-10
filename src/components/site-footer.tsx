@@ -40,11 +40,12 @@ export function SiteFooter() {
       </div>
       <div className="footer-wordmark">
         <Image
-          src="/anubi-assets/_next/static/media/anubi-footer.9e2d2407.svg"
-          alt="Anubi"
-          width={280}
-          height={60}
-          style={{ width: "auto", height: "auto" }}
+          src="/brand-assets/stab.svg"
+          alt="Stab"
+          width={4052}
+          height={692}
+          unoptimized
+          className="footer-wordmark-img"
         />
       </div>
     </footer>

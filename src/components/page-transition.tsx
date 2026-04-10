@@ -13,8 +13,8 @@ let transitionBootstrapped = false;
 let lastTransitionPathname: string | null = null;
 
 /**
- * anubi.io page transition: fixed row of black vertical stripes that collapse
- * (height → 0) with stagger from the start — see _app chunk (pageTransition + _stripe).
+ * Route transition: fixed row of black vertical stripes that collapse
+ * (height → 0) with stagger from the start.
  */
 export function PageTransition() {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -79,7 +79,7 @@ export function PageTransition() {
           {i === LOGO_STRIPE_INDEX ? (
             <div className="page-transition-stripe-text">
               <Image
-                src="/anubi-assets/_next/static/media/anubi.00dff3f2.svg"
+                src="/brand-assets/_next/static/media/stab-mark.00dff3f2.svg"
                 alt=""
                 width={64}
                 height={64}

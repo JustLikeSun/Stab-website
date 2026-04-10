@@ -15,9 +15,9 @@ const capabilities = [
 ];
 
 const work = [
-  { title: "Diadora Utility", tag: "CGI", image: "/assets/anubi-cdn/e1f43059cf31ae783ea72963fb14ae39ee0677cf-1920x1080-w1920.png" },
-  { title: "Essilor Luxottica", tag: "3D Animation", image: "/assets/anubi-cdn/214c2c0f506856bd35ef95a80d0731889e54c518-1920x1080-w1920.webp" },
-  { title: "Efferalgan - TV Commercial", tag: "Advertising", image: "/assets/anubi-cdn/735130d2e9f05a3af36bd1c2106cc3cd8bd07e84-3840x2160-w3200.png" },
+  { title: "Diadora Utility", tag: "CGI", image: "/assets/media-cdn/e1f43059cf31ae783ea72963fb14ae39ee0677cf-1920x1080-w1920.png" },
+  { title: "Essilor Luxottica", tag: "3D Animation", image: "/assets/media-cdn/214c2c0f506856bd35ef95a80d0731889e54c518-1920x1080-w1920.webp" },
+  { title: "Efferalgan - TV Commercial", tag: "Advertising", image: "/assets/media-cdn/735130d2e9f05a3af36bd1c2106cc3cd8bd07e84-3840x2160-w3200.png" },
 ];
 
 export default function Service3DPage() {

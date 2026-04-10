@@ -22,15 +22,15 @@ export function SiteHeader() {
           <div className="mobile-header-shelf">
           <Link href="/" className="mobile-header-logo" aria-label="Home">
             <Image
-              src="/anubi-assets/_next/static/media/anubi.00dff3f2.svg"
+              src="/brand-assets/_next/static/media/stab-mark.00dff3f2.svg"
               alt=""
               width={32}
               height={32}
               className="site-header-mark"
             />
             <span className="header-brand">
-              <span className="header-brand-name">Anubi</span>
-              <span className="header-brand-tagline">Creative Studio</span>
+              <span className="header-brand-name">STAB</span>
+              <span className="header-brand-tagline">Creative Agency</span>
             </span>
           </Link>
           <nav className="header-desktop-nav">

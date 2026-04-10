@@ -1,7 +1,7 @@
 {
   "meta": {
-    "name": "anubi-extracted-tokens",
-    "source": "mirrored anubi.io css/html",
+    "name": "stab-design-tokens",
+    "source": "Stab site CSS / HTML baseline",
     "version": "0.1.0"
   },
   "color": {

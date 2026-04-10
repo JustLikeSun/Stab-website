@@ -13,8 +13,8 @@ type ContactCtaButtonProps = {
 };
 
 /**
- * Mirrors anubi.io end CTA: magnetic follow, hover ripple, per-letter pop,
- * subtle idle float, ScrollTrigger entrance (GSAP, same timing/easing as source).
+ * End CTA control: magnetic follow, hover ripple, per-letter pop,
+ * subtle idle float, ScrollTrigger entrance (GSAP).
  */
 export function ContactCtaButton({
   href = "/contact",

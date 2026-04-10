@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════════════
-   TOKENS  (extracted from anubi.io source CSS)
+   TOKENS  (extracted from stab.agency source CSS)
    ═══════════════════════════════════════════════════════ */
 
 :root {
@@ -63,7 +63,7 @@ body.lock-scroll {
   overflow-y: hidden !important;
 }
 
-/* anubi.io pageTransition: row of stripes that collapse (height → 0), staggered */
+/* stab.agency pageTransition: row of stripes that collapse (height → 0), staggered */
 .page-transition-root {
   align-items: flex-start;
   display: flex;
@@ -553,7 +553,8 @@ button { font: inherit; }
   color: #222;
 }
 
-.kinetic-lines-logo svg {
+.kinetic-lines-logo svg,
+.kinetic-lines-logo .kinetic-lines-mark-img {
   display: block;
   width: 100%;
   height: auto;
@@ -634,8 +635,8 @@ button { font: inherit; }
   z-index: 2;
 }
 
-/* HeroModule_heroTitle__DIMTr — live anubi.io: plain h1 + text-wrap:balance */
-/* No opacity fade — anubi hero h1 reads as solid black from first paint */
+/* HeroModule_heroTitle__DIMTr — live stab.agency: plain h1 + text-wrap:balance */
+/* No opacity fade — reference hero h1 reads as solid black from first paint */
 .hero-title {
   animation: heroTitleEnter 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
   color: #0a0a0a;
@@ -797,10 +798,10 @@ button { font: inherit; }
 .action-card:hover .action-desc.light { color: hsla(0, 0%, 100%, 0.9); }
 
 /* ═══════════════════════════════════════════════════════
-   CLIENTS — copied from anubi.io #home-clients (96e060b8430ff04d.css)
+   CLIENTS — copied from stab.agency #home-clients (96e060b8430ff04d.css)
    ═══════════════════════════════════════════════════════ */
 
-@keyframes anubi-logo-opacity-wave {
+@keyframes stab-logo-opacity-wave {
   0% {
     filter: grayscale(100%) contrast(1);
     opacity: 0.34;
@@ -850,7 +851,7 @@ button { font: inherit; }
   margin-inline: 0;
   max-width: none;
   padding-block: 0;
-  /* Full-bleed grid like anubi .style_container__miyHb (not capped at --page-max-width) */
+  /* Full-bleed grid like reference .style_container__miyHb (not capped at --page-max-width) */
   padding-inline: clamp(16px, 3.25vw, 36px);
   position: relative;
   width: 100%;
@@ -883,14 +884,14 @@ button { font: inherit; }
 }
 
 .clients-partner-img {
-  animation-name: anubi-logo-opacity-wave;
+  animation-name: stab-logo-opacity-wave;
   animation-duration: 6.48s;
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   filter: grayscale(100%) contrast(1);
   height: auto;
-  /* Matches anubi .style_partnerImage__TEwEC — size comes from cell width + min-height, not a fixed px cap */
+  /* Matches reference .style_partnerImage__TEwEC — size comes from cell width + min-height, not a fixed px cap */
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
@@ -941,7 +942,7 @@ button { font: inherit; }
   z-index: 1;
 }
 
-/* Eyebrow always matches anubi .style_sectionLabel__B8zJr (never body default black) */
+/* Eyebrow always matches reference .style_sectionLabel__B8zJr (never body default black) */
 .services-section .sec-label {
   color: hsla(0, 0%, 100%, 0.58);
 }
@@ -1055,7 +1056,7 @@ button { font: inherit; }
   width: 100%;
 }
 
-/* anubi.io: .style_featuredSection__MQM7Y — full-bleed band; padding only (no 88% page width) */
+/* stab.agency: .style_featuredSection__MQM7Y — full-bleed band; padding only (no 88% page width) */
 .work-featured {
   margin: 0;
   padding: clamp(32px, 5vw, 64px) clamp(16px, 3.25vw, 36px) clamp(40px, 6vw, 72px);
@@ -1291,7 +1292,7 @@ button { font: inherit; }
   width: 100%;
 }
 
-/* Eyebrow sits above the bordered module (anubi: .style_sectionHeader__GyvVQ) */
+/* Eyebrow sits above the bordered module (reference: .style_sectionHeader__GyvVQ) */
 .ai-section-header {
   align-items: center;
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
@@ -1308,7 +1309,7 @@ button { font: inherit; }
   gap: 14px;
 }
 
-/* anubi: .style_sectionLabel__nEPx6 */
+/* reference: .style_sectionLabel__nEPx6 */
 .ai-section-label {
   color: hsla(0, 0%, 100%, 0.6);
   font-size: 0.75rem;
@@ -1893,12 +1894,16 @@ button { font: inherit; }
   padding: 0 clamp(16px, 3vw, 36px);
 }
 
-.footer-wordmark img {
+.footer-wordmark img,
+.footer-wordmark .footer-wordmark-img {
+  width: min(100%, 560px);
+  height: auto;
   transition: opacity 0.3s ease;
   opacity: 0.85;
 }
 
-.footer-wordmark:hover img {
+.footer-wordmark:hover img,
+.footer-wordmark:hover .footer-wordmark-img {
   opacity: 1;
 }
 
@@ -1975,7 +1980,7 @@ button { font: inherit; }
   align-items: start;
 }
 /* ═══════════════════════════════════════════════════════
-   CONTACT PAGE (/contact) — anubi.io/contact
+   CONTACT PAGE (/contact) — stab.agency/contact
    ═══════════════════════════════════════════════════════ */
 
 .contact-page {
@@ -2467,7 +2472,7 @@ button { font: inherit; }
 .reveal.is-visible .work-all-item:nth-child(12) { transition-delay: 0.6s; }
 
 /* ═══════════════════════════════════════════════════════
-   WORK INDEX (/work/all) — anubi.io/work/all
+   WORK INDEX (/work/all) — stab.agency/work/all
    ═══════════════════════════════════════════════════════ */
 
 .work-all-page {
@@ -2750,7 +2755,7 @@ button { font: inherit; }
 }
 
 /* ═══════════════════════════════════════════════════════
-   WORK CASE STUDY (/work/[slug]) — anubi.io layout
+   WORK CASE STUDY (/work/[slug]) — stab.agency layout
    ═══════════════════════════════════════════════════════ */
 
 .work-case-page {

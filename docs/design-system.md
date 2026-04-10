@@ -1,6 +1,6 @@
-# Anubi Visual Identity & Design System (Extracted Baseline)
+# Stab — visual identity & design system (baseline)
 
-This document captures the extracted visual system from the mirrored `anubi.io` source and translates it into reusable implementation guidance for the Next rebuild.
+This document captures the extracted visual system used as the baseline for the Stab site and translates it into reusable implementation guidance.
 
 ## Brand Character
 

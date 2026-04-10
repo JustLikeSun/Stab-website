@@ -3,13 +3,13 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
 import {
-  ANUBI_CLIENT_WAVE_DURATION_S,
-  ANUBI_CLIENT_WAVE_STAGGER_S,
+  STAB_CLIENT_WAVE_DURATION_S,
+  STAB_CLIENT_WAVE_STAGGER_S,
   homeClients,
 } from "@/data/clients";
 
 /**
- * Mirrors anubi.io `#home-clients`: 9 logos, Sanity assets, grid + inset hairline,
+ * Home clients strip: 9 logos, Sanity assets, grid + inset hairline,
  * `logoOpacityWave` animation (6.48s, staggered negative delays).
  */
 export function ClientsStrip() {
@@ -26,9 +26,9 @@ export function ClientsStrip() {
       <div className="page-container clients-section-inner">
         <ul className="clients-partners-grid" role="list">
           {homeClients.map((c, i) => {
-            const delayS = -(n - 1 - i) * ANUBI_CLIENT_WAVE_STAGGER_S;
+            const delayS = -(n - 1 - i) * STAB_CLIENT_WAVE_STAGGER_S;
             const waveStyle = {
-              animationDuration: `${ANUBI_CLIENT_WAVE_DURATION_S}s`,
+              animationDuration: `${STAB_CLIENT_WAVE_DURATION_S}s`,
               animationDelay: `${delayS}s`,
             } as CSSProperties;
 

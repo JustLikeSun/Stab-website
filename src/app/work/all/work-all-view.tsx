@@ -37,8 +37,8 @@ export function WorkAllView({ items }: { items: WorkListingEntry[] }) {
               Work
             </h1>
             <p className="work-all-lead">
-              Explore all work by Anubi, an Italian creative studio focused on CGI, 3D motion, AI
-              and creative websites.
+              Explore all work by Stab — creative agency for CGI, 3D motion, AI and creative
+              websites.
             </p>
           </div>
         </section>

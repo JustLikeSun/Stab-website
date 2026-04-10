@@ -15,9 +15,9 @@ const capabilities = [
 ];
 
 const work = [
-  { title: "UPSA x NOURISHED - Gummies", tag: "Commercial / Advertising", image: "/assets/anubi-cdn/ab8fadeb12bdd710c924bfe7ed9f1d0402a8cc4d-2700x2160-w2200.png" },
-  { title: "Converse Cherry - AW LAB", tag: "Art Direction", image: "/assets/anubi-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png" },
-  { title: "Mullet Tea - Can Launch", tag: "Art Direction", image: "/assets/anubi-cdn/ac1f57d527cde045557bf70ed044e9c7dc79bf38-1920x1080-w1920.png" },
+  { title: "UPSA x NOURISHED - Gummies", tag: "Commercial / Advertising", image: "/assets/media-cdn/ab8fadeb12bdd710c924bfe7ed9f1d0402a8cc4d-2700x2160-w2200.png" },
+  { title: "Converse Cherry - AW LAB", tag: "Art Direction", image: "/assets/media-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png" },
+  { title: "Mullet Tea - Can Launch", tag: "Art Direction", image: "/assets/media-cdn/ac1f57d527cde045557bf70ed044e9c7dc79bf38-1920x1080-w1920.png" },
 ];
 
 export default function ServiceMotionPage() {

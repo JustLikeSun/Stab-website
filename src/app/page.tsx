@@ -19,12 +19,12 @@ const services: [string, string][] = [
 ];
 
 const work = [
-  { slug: "diadora-utility", title: "Diadora Utility", tag: "CGI", image: "/assets/anubi-cdn/e1f43059cf31ae783ea72963fb14ae39ee0677cf-1920x1080-w1920.png", large: true },
-  { slug: "essilor-luxottica", title: "Essilor Luxottica", tag: "3D Animation", image: "/assets/anubi-cdn/214c2c0f506856bd35ef95a80d0731889e54c518-1920x1080-w1920.webp", large: false },
-  { slug: "efferalgan-tv-commercial", title: "Efferalgan - TV Commercial", tag: "Advertising", image: "/assets/anubi-cdn/735130d2e9f05a3af36bd1c2106cc3cd8bd07e84-3840x2160-w3200.png", large: false },
-  { slug: "upsa-x-nourished-gummies", title: "UPSA x NOURISHED - Gummies", tag: "Commercial / Advertising", image: "/assets/anubi-cdn/ab8fadeb12bdd710c924bfe7ed9f1d0402a8cc4d-2700x2160-w2200.png", large: true },
-  { slug: "converse-cherry-aw-lab", title: "Converse Cherry - AW LAB", tag: "Art Direction", image: "/assets/anubi-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png", large: false },
-  { slug: "mullet-tea-can-launch", title: "Mullet Tea - Can Launch", tag: "Art Direction", image: "/assets/anubi-cdn/ac1f57d527cde045557bf70ed044e9c7dc79bf38-1920x1080-w1920.png", large: false },
+  { slug: "diadora-utility", title: "Diadora Utility", tag: "CGI", image: "/assets/media-cdn/e1f43059cf31ae783ea72963fb14ae39ee0677cf-1920x1080-w1920.png", large: true },
+  { slug: "essilor-luxottica", title: "Essilor Luxottica", tag: "3D Animation", image: "/assets/media-cdn/214c2c0f506856bd35ef95a80d0731889e54c518-1920x1080-w1920.webp", large: false },
+  { slug: "efferalgan-tv-commercial", title: "Efferalgan - TV Commercial", tag: "Advertising", image: "/assets/media-cdn/735130d2e9f05a3af36bd1c2106cc3cd8bd07e84-3840x2160-w3200.png", large: false },
+  { slug: "upsa-x-nourished-gummies", title: "UPSA x NOURISHED - Gummies", tag: "Commercial / Advertising", image: "/assets/media-cdn/ab8fadeb12bdd710c924bfe7ed9f1d0402a8cc4d-2700x2160-w2200.png", large: true },
+  { slug: "converse-cherry-aw-lab", title: "Converse Cherry - AW LAB", tag: "Art Direction", image: "/assets/media-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png", large: false },
+  { slug: "mullet-tea-can-launch", title: "Mullet Tea - Can Launch", tag: "Art Direction", image: "/assets/media-cdn/ac1f57d527cde045557bf70ed044e9c7dc79bf38-1920x1080-w1920.png", large: false },
 ];
 
 export default function Home() {
@@ -79,7 +79,7 @@ export default function Home() {
       {/* ────────── BENTO HERO ────────── */}
       <section className="bento-container">
         <div className="bento-grid">
-          {/* Kinetic / ANUBI: dot field + lens (canvas) + vector mark (overlay), like anubi.io */}
+          {/* Kinetic hero: dot field + lens (canvas) + vector mark overlay */}
           <div
             className="grid-card premium kinetic-card"
             style={{ "--col-desktop": "1/7", "--row-desktop": "1/3", "--col-tablet": "1/7", "--col-mobile": "1/5" } as React.CSSProperties}
@@ -98,7 +98,7 @@ export default function Home() {
                 We are a creative production studio for CGI, 3D and motion.
               </h1>
               <p className="hero-subtitle">
-                Anubi combines art direction, CGI, motion design and AI-integrated
+                Stab combines art direction, CGI, motion design and AI-integrated
                 workflows with ongoing R&amp;D, experimentation and production-ready
                 execution for brands and agencies.
               </p>
@@ -126,8 +126,8 @@ export default function Home() {
             style={{ "--col-desktop": "7/13", "--row-desktop": "1/7", "--col-tablet": "1/7", "--col-mobile": "1/5" } as React.CSSProperties}
           >
             <Image
-              src="/assets/anubi-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png"
-              alt="Anubi creative work showcase"
+              src="/assets/media-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png"
+              alt="Stab creative work showcase"
               fill
               style={{ objectFit: "cover" }}
               unoptimized
@@ -182,7 +182,7 @@ export default function Home() {
             </div>
             <div className="services-hero-right">
               <p className="services-subcopy">
-                Anubi is a multidisciplinary creative studio focused on 3D, CGI and
+                Stab is a multidisciplinary creative studio focused on 3D, CGI and
                 animation, with web and AI integrated where they strengthen the work.
                 We build films, stills and digital experiences through an artisan process
                 shaped by direction, design, modeling, lighting, motion and finishing.
@@ -253,9 +253,9 @@ export default function Home() {
             <h2 id="home-ai-heading" className="ai-title">AI-integrated CGI, 3D and motion production.</h2>
           </div>
           <div className="ai-col-copy">
-            <p className="ai-lead">Anubi is a creative studio for 3D CGI, motion design, art direction and AI production. We design custom workflows for mixed-media campaigns, concept development and premium moving-image work.</p>
+            <p className="ai-lead">Stab is a creative studio for 3D CGI, motion design, art direction and AI production. We design custom workflows for mixed-media campaigns, concept development and premium moving-image work.</p>
             <p className="ai-body">
-              AI is integrated into the craft, not treated as a shortcut. Through ongoing R&amp;D, Anubi creates and refines production workflows that combine direction, look development, CGI, compositing and generative tools into controlled, production-ready results.
+              AI is integrated into the craft, not treated as a shortcut. Through ongoing R&amp;D, Stab creates and refines production workflows that combine direction, look development, CGI, compositing and generative tools into controlled, production-ready results.
             </p>
           </div>
           <div className="ai-col-meta">

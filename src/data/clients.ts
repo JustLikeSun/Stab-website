@@ -1,5 +1,5 @@
 /**
- * Home client logos — same count, order, and CDN assets as anubi.io `homeClientLogos`
+ * Home client logos — count, order, and Sanity CDN assets aligned with the live reference layout
  * (from live `__NEXT_DATA__` / HTML, April 2026).
  */
 export type ClientLogo = {
@@ -70,6 +70,6 @@ export const homeClients: ClientLogo[] = [
   },
 ];
 
-/** Matches anubi inline styles: duration 6.48s, delay -(8−i)×0.72s */
-export const ANUBI_CLIENT_WAVE_DURATION_S = 6.48;
-export const ANUBI_CLIENT_WAVE_STAGGER_S = 0.72;
+/** Matches reference inline styles: duration 6.48s, delay -(8−i)×0.72s */
+export const STAB_CLIENT_WAVE_DURATION_S = 6.48;
+export const STAB_CLIENT_WAVE_STAGGER_S = 0.72;

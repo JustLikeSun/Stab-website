@@ -1,4 +1,4 @@
-/** Case studies mirrored from anubi.io structure + copy. Images: local /assets or Sanity CDN. */
+/** Case studies and portfolio copy for Stab. Images: `public/assets/media-cdn` and Sanity CDN. */
 
 export type WorkBlock =
   | { type: "text"; html: string }
@@ -32,7 +32,7 @@ export type WorkProject = {
 export const sanityImage = (filename: string, w = 1920) =>
   `https://cdn.sanity.io/images/ix6ogha4/production/${filename}?w=${w}&auto=format&q=88`;
 
-/** Prev / next order aligned with anubi.io around Essilor */
+/** Prev / next order aligned with portfolio sequence around Essilor */
 export const WORK_SLUG_ORDER: string[] = [
   "diadora-utility",
   "essilor-luxottica",
@@ -53,9 +53,9 @@ const projects: WorkProject[] = [
     slug: "diadora-utility",
     title: "Diadora Utility",
     tag: "CGI",
-    listImage: "/assets/anubi-cdn/e1f43059cf31ae783ea72963fb14ae39ee0677cf-1920x1080-w1920.png",
+    listImage: "/assets/media-cdn/e1f43059cf31ae783ea72963fb14ae39ee0677cf-1920x1080-w1920.png",
     description:
-      "Explore the case study Diadora Utility. Anubi Creative Studio was involved in CGI, Motion Design, Commercial/Advertising.",
+      "Explore the case study Diadora Utility. Stab Creative Agency was involved in CGI, Motion Design, Commercial/Advertising.",
     clients: ["Diadora"],
     agency: "Postilla",
     services: ["CGI", "Motion Design", "Commercial/Advertising"],
@@ -67,7 +67,7 @@ const projects: WorkProject[] = [
       },
       {
         type: "image",
-        src: "/assets/anubi-cdn/e1f43059cf31ae783ea72963fb14ae39ee0677cf-1920x1080-w1920.png",
+        src: "/assets/media-cdn/e1f43059cf31ae783ea72963fb14ae39ee0677cf-1920x1080-w1920.png",
         alt: "Diadora Utility case study image",
         width: 1920,
         height: 1080,
@@ -79,10 +79,10 @@ const projects: WorkProject[] = [
     slug: "essilor-luxottica",
     title: "Essilor Luxottica",
     tag: "3D Animation",
-    listImage: "/assets/anubi-cdn/214c2c0f506856bd35ef95a80d0731889e54c518-1920x1080-w1920.webp",
+    listImage: "/assets/media-cdn/214c2c0f506856bd35ef95a80d0731889e54c518-1920x1080-w1920.webp",
     coverImage: sanityImage("ab8fadeb12bdd710c924bfe7ed9f1d0402a8cc4d-2700x2160.png", 2200),
     description:
-      "Explore the case study Essilor Luxottica. Anubi Creative Studio was involved in 3D Animation, CGI, Art Direction.",
+      "Explore the case study Essilor Luxottica. Stab Creative Agency was involved in 3D Animation, CGI, Art Direction.",
     ogImage: sanityImage("ab8fadeb12bdd710c924bfe7ed9f1d0402a8cc4d-2700x2160.png", 1600),
     clients: ["Luxottica"],
     services: ["3D Animation", "CGI", "Art Direction"],
@@ -139,9 +139,9 @@ const projects: WorkProject[] = [
     title: "Emporio Armani x Forestami",
     tag: "Motion Design",
     listImage:
-      "/assets/anubi-cdn/9cfa8041a4e9d770f50d8bc6214e831b18846b19-1920x1080-w1920.png",
+      "/assets/media-cdn/9cfa8041a4e9d770f50d8bc6214e831b18846b19-1920x1080-w1920.png",
     description:
-      "Explore the case study Emporio Armani x Forestami. Anubi Creative Studio was involved in Motion Design.",
+      "Explore the case study Emporio Armani x Forestami. Stab Creative Agency was involved in Motion Design.",
     ogImage: sanityImage("9cfa8041a4e9d770f50d8bc6214e831b18846b19-1920x1080.png", 1600),
     clients: ["Emporio Armani"],
     services: ["Motion Design"],
@@ -153,7 +153,7 @@ const projects: WorkProject[] = [
       },
       {
         type: "image",
-        src: "/assets/anubi-cdn/9cfa8041a4e9d770f50d8bc6214e831b18846b19-1920x1080-w1920.png",
+        src: "/assets/media-cdn/9cfa8041a4e9d770f50d8bc6214e831b18846b19-1920x1080-w1920.png",
         alt: "Emporio Armani x Forestami case study image",
         width: 1920,
         height: 1080,
@@ -165,9 +165,9 @@ const projects: WorkProject[] = [
     slug: "efferalgan-tv-commercial",
     title: "Efferalgan - TV Commercial",
     tag: "Advertising",
-    listImage: "/assets/anubi-cdn/735130d2e9f05a3af36bd1c2106cc3cd8bd07e84-3840x2160-w3200.png",
+    listImage: "/assets/media-cdn/735130d2e9f05a3af36bd1c2106cc3cd8bd07e84-3840x2160-w3200.png",
     description:
-      "Explore the case study Efferalgan. Anubi Creative Studio was involved in Commercial/Advertising, 3D Animation, CGI.",
+      "Explore the case study Efferalgan. Stab Creative Agency was involved in Commercial/Advertising, 3D Animation, CGI.",
     clients: ["UPSA"],
     agency: "Naïve",
     services: ["Commercial/Advertising", "3D Animation", "CGI"],
@@ -179,7 +179,7 @@ const projects: WorkProject[] = [
       },
       {
         type: "image",
-        src: "/assets/anubi-cdn/735130d2e9f05a3af36bd1c2106cc3cd8bd07e84-3840x2160-w3200.png",
+        src: "/assets/media-cdn/735130d2e9f05a3af36bd1c2106cc3cd8bd07e84-3840x2160-w3200.png",
         alt: "Efferalgan case study image",
         width: 3840,
         height: 2160,
@@ -191,9 +191,9 @@ const projects: WorkProject[] = [
     slug: "upsa-x-nourished-gummies",
     title: "UPSA x NOURISHED - Gummies",
     tag: "Commercial / Advertising",
-    listImage: "/assets/anubi-cdn/ab8fadeb12bdd710c924bfe7ed9f1d0402a8cc4d-2700x2160-w2200.png",
+    listImage: "/assets/media-cdn/ab8fadeb12bdd710c924bfe7ed9f1d0402a8cc4d-2700x2160-w2200.png",
     description:
-      "Explore the case study UPSA x NOURISHED. Anubi Creative Studio was involved in Commercial/Advertising.",
+      "Explore the case study UPSA x NOURISHED. Stab Creative Agency was involved in Commercial/Advertising.",
     clients: ["UPSA", "Nourished"],
     agency: "Naïve",
     services: ["Commercial/Advertising"],
@@ -201,11 +201,11 @@ const projects: WorkProject[] = [
     blocks: [
       {
         type: "text",
-        html: `<p>We collaborated with Naive Agency on the production of a series of commercials for UPSA, in partnership with NOURISHED, to showcase three products from their supplement line: Gummies Sleep, Energy, and Collagen Skin. Anubi handled the entire 3D production, motion graphics, and video, creating visually engaging content with clear and effective storytelling to highlight the benefits of each product.</p>`,
+        html: `<p>We collaborated with Naive Agency on the production of a series of commercials for UPSA, in partnership with NOURISHED, to showcase three products from their supplement line: Gummies Sleep, Energy, and Collagen Skin. Stab handled the entire 3D production, motion graphics, and video, creating visually engaging content with clear and effective storytelling to highlight the benefits of each product.</p>`,
       },
       {
         type: "image",
-        src: "/assets/anubi-cdn/ab8fadeb12bdd710c924bfe7ed9f1d0402a8cc4d-2700x2160-w2200.png",
+        src: "/assets/media-cdn/ab8fadeb12bdd710c924bfe7ed9f1d0402a8cc4d-2700x2160-w2200.png",
         alt: "UPSA x NOURISHED case study image",
         width: 2700,
         height: 2160,
@@ -217,9 +217,9 @@ const projects: WorkProject[] = [
     slug: "converse-cherry-aw-lab",
     title: "Converse Cherry - AW LAB",
     tag: "Art Direction",
-    listImage: "/assets/anubi-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png",
+    listImage: "/assets/media-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png",
     description:
-      "Explore the case study Converse Cherry. Anubi Creative Studio was involved in Art Direction, 3D Art & Design, CGI and more.",
+      "Explore the case study Converse Cherry. Stab Creative Agency was involved in Art Direction, 3D Art & Design, CGI and more.",
     clients: ["AW LAB", "Converse"],
     services: [
       "Art Direction",
@@ -232,11 +232,11 @@ const projects: WorkProject[] = [
     blocks: [
       {
         type: "text",
-        html: `<p>Anubi was invited by AW LAB to tell the story of the three new Converse Cherry shoes in an engaging and dynamic 3D visual, which aims to capture the attention of the new generations both digitally and in stores, along with key visuals for the broader digital campaign.</p>`,
+        html: `<p>Stab was invited by AW LAB to tell the story of the three new Converse Cherry shoes in an engaging and dynamic 3D visual, which aims to capture the attention of the new generations both digitally and in stores, along with key visuals for the broader digital campaign.</p>`,
       },
       {
         type: "image",
-        src: "/assets/anubi-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png",
+        src: "/assets/media-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png",
         alt: "Converse Cherry case study image",
         width: 1920,
         height: 1080,
@@ -248,9 +248,9 @@ const projects: WorkProject[] = [
     slug: "mullet-tea-can-launch",
     title: "Mullet Tea - Can Launch",
     tag: "Art Direction",
-    listImage: "/assets/anubi-cdn/ac1f57d527cde045557bf70ed044e9c7dc79bf38-1920x1080-w1920.png",
+    listImage: "/assets/media-cdn/ac1f57d527cde045557bf70ed044e9c7dc79bf38-1920x1080-w1920.png",
     description:
-      "Explore the case study Mullet Tea - Can Launch. Anubi Creative Studio was involved in Art Direction, 3D Animation, Commercial/Advertising.",
+      "Explore the case study Mullet Tea - Can Launch. Stab Creative Agency was involved in Art Direction, 3D Animation, Commercial/Advertising.",
     clients: ["Mullet Tea"],
     services: ["Art Direction", "3D Animation", "Commercial/Advertising"],
     year: "2024",
@@ -261,7 +261,7 @@ const projects: WorkProject[] = [
       },
       {
         type: "image",
-        src: "/assets/anubi-cdn/ac1f57d527cde045557bf70ed044e9c7dc79bf38-1920x1080-w1920.png",
+        src: "/assets/media-cdn/ac1f57d527cde045557bf70ed044e9c7dc79bf38-1920x1080-w1920.png",
         alt: "Mullet Tea - Can Launch case study image",
         width: 1920,
         height: 1080,
@@ -273,19 +273,19 @@ const projects: WorkProject[] = [
     slug: "stellest-chip",
     title: "Stellest Chip",
     tag: "CGI",
-    listImage: "/assets/anubi-cdn/9cfa8041a4e9d770f50d8bc6214e831b18846b19-1920x1080-w1920.png",
-    description: "CGI and look development study from Anubi Lab.",
-    clients: ["Anubi Lab"],
+    listImage: "/assets/media-cdn/9cfa8041a4e9d770f50d8bc6214e831b18846b19-1920x1080-w1920.png",
+    description: "CGI and look development study from Stab Lab.",
+    clients: ["Stab Lab"],
     services: ["CGI", "3D"],
     year: "2025",
     blocks: [
       {
         type: "text",
-        html: `<p>Creative experiment exploring material, light and product storytelling—part of the ongoing R&amp;D work in Anubi Lab.</p>`,
+        html: `<p>Creative experiment exploring material, light and product storytelling—part of the ongoing R&amp;D work in Stab Lab.</p>`,
       },
       {
         type: "image",
-        src: "/assets/anubi-cdn/9cfa8041a4e9d770f50d8bc6214e831b18846b19-1920x1080-w1920.png",
+        src: "/assets/media-cdn/9cfa8041a4e9d770f50d8bc6214e831b18846b19-1920x1080-w1920.png",
         alt: "Stellest Chip",
         width: 1920,
         height: 1080,
@@ -297,19 +297,19 @@ const projects: WorkProject[] = [
     slug: "gshock",
     title: "GSHOCK",
     tag: "3D / CGI",
-    listImage: "/assets/anubi-cdn/c84631a433dab0298e0edb2d90565893478d572b-1920x1080-w1920.png",
-    description: "3D and CGI experiment from Anubi Lab.",
-    clients: ["Anubi Lab"],
+    listImage: "/assets/media-cdn/c84631a433dab0298e0edb2d90565893478d572b-1920x1080-w1920.png",
+    description: "3D and CGI experiment from Stab Lab.",
+    clients: ["Stab Lab"],
     services: ["3D", "CGI"],
     year: "2025",
     blocks: [
       {
         type: "text",
-        html: `<p>Visual experiment focused on product form, shaders and mood—produced as part of Anubi Lab explorations.</p>`,
+        html: `<p>Visual experiment focused on product form, shaders and mood—produced as part of Stab Lab explorations.</p>`,
       },
       {
         type: "image",
-        src: "/assets/anubi-cdn/c84631a433dab0298e0edb2d90565893478d572b-1920x1080-w1920.png",
+        src: "/assets/media-cdn/c84631a433dab0298e0edb2d90565893478d572b-1920x1080-w1920.png",
         alt: "GSHOCK",
         width: 1920,
         height: 1080,
@@ -321,9 +321,9 @@ const projects: WorkProject[] = [
     slug: "flower",
     title: "Flower",
     tag: "CGI",
-    listImage: "/assets/anubi-cdn/a0c219e21caa8c8488219de1e61ca8b9cfd5ddad-1920x1080-w1920.png",
-    description: "CGI study from Anubi Lab.",
-    clients: ["Anubi Lab"],
+    listImage: "/assets/media-cdn/a0c219e21caa8c8488219de1e61ca8b9cfd5ddad-1920x1080-w1920.png",
+    description: "CGI study from Stab Lab.",
+    clients: ["Stab Lab"],
     services: ["CGI"],
     year: "2025",
     blocks: [
@@ -333,7 +333,7 @@ const projects: WorkProject[] = [
       },
       {
         type: "image",
-        src: "/assets/anubi-cdn/a0c219e21caa8c8488219de1e61ca8b9cfd5ddad-1920x1080-w1920.png",
+        src: "/assets/media-cdn/a0c219e21caa8c8488219de1e61ca8b9cfd5ddad-1920x1080-w1920.png",
         alt: "Flower",
         width: 1920,
         height: 1080,
@@ -345,19 +345,19 @@ const projects: WorkProject[] = [
     slug: "rnd-honey",
     title: "RND - Honey",
     tag: "R&D",
-    listImage: "/assets/anubi-cdn/8c3ff10ff7cc3dfdb4023c3e36a926f8d608ad77-1920x1080-w1800.png",
-    description: "R&D visual experiment from Anubi Lab.",
-    clients: ["Anubi Lab"],
+    listImage: "/assets/media-cdn/8c3ff10ff7cc3dfdb4023c3e36a926f8d608ad77-1920x1080-w1800.png",
+    description: "R&D visual experiment from Stab Lab.",
+    clients: ["Stab Lab"],
     services: ["R&D", "CGI"],
     year: "2025",
     blocks: [
       {
         type: "text",
-        html: `<p>Research-driven look development and rendering study from Anubi Lab.</p>`,
+        html: `<p>Research-driven look development and rendering study from Stab Lab.</p>`,
       },
       {
         type: "image",
-        src: "/assets/anubi-cdn/8c3ff10ff7cc3dfdb4023c3e36a926f8d608ad77-1920x1080-w1800.png",
+        src: "/assets/media-cdn/8c3ff10ff7cc3dfdb4023c3e36a926f8d608ad77-1920x1080-w1800.png",
         alt: "RND - Honey",
         width: 1920,
         height: 1080,
@@ -369,9 +369,9 @@ const projects: WorkProject[] = [
     slug: "red-studio-creative-website",
     title: "Red Studio — Creative Website",
     tag: "Creative Experiments",
-    listImage: "/assets/anubi-cdn/5337f568925cf43e80caeaa1611dab578d90f0d1-3072x1728-w2200.webp",
+    listImage: "/assets/media-cdn/5337f568925cf43e80caeaa1611dab578d90f0d1-3072x1728-w2200.webp",
     description:
-      "Explore the case study Red Studio — Creative Website. Anubi Creative Studio was involved in Creative Website, Branding.",
+      "Explore the case study Red Studio — Creative Website. Stab Creative Agency was involved in Creative Website, Branding.",
     clients: ["Red Studio"],
     services: ["Creative Website", "Branding"],
     year: "2024",
@@ -382,7 +382,7 @@ const projects: WorkProject[] = [
       },
       {
         type: "image",
-        src: "/assets/anubi-cdn/5337f568925cf43e80caeaa1611dab578d90f0d1-3072x1728-w2200.webp",
+        src: "/assets/media-cdn/5337f568925cf43e80caeaa1611dab578d90f0d1-3072x1728-w2200.webp",
         alt: "Red Studio — Creative Website case study image",
         width: 3072,
         height: 1728,
@@ -414,7 +414,7 @@ export function getWorkNeighbors(slug: string): {
   };
 }
 
-/** Full-width cards on anubi.io/work/all (e.g. Emporio Armani, MINE, Hublot, Dualsense). */
+/** Full-width cards on `/work/all` (e.g. Emporio Armani, MINE, Hublot, Dualsense). */
 const WORK_ALL_LARGE_SLUGS = new Set<string>(["emporio-armani-forestami"]);
 
 export type WorkListingEntry = {

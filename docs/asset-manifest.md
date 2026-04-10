@@ -1,20 +1,20 @@
-# Anubi Asset Manifest (Extracted)
+# Stab — asset manifest
 
-This manifest maps extracted assets to current and intended usage in the rebuild.
+This manifest maps static assets to usage in the Next.js app.
 
-## 1) Brand / UI System Assets
+## 1) Brand / UI system assets
 
-Location: [`public/anubi-assets/_next/static/media`](public/anubi-assets/_next/static/media)
+Location: [`public/brand-assets/_next/static/media`](public/brand-assets/_next/static/media)
 
 ### Brand marks
 
-- `anubi.00dff3f2.svg`
+- `stab-mark.00dff3f2.svg`
   - Current usage: header brand icon
-  - File: [`src/components/site-header.tsx`](src/components/site-header.tsx)
+  - File: [`src/components/site-header.tsx`](../src/components/site-header.tsx)
 
-- `anubi-footer.9e2d2407.svg`
+- `stab-footer.9e2d2407.svg`
   - Current usage: footer brand lockup
-  - File: [`src/components/site-footer.tsx`](src/components/site-footer.tsx)
+  - File: [`src/components/site-footer.tsx`](../src/components/site-footer.tsx)
 
 ### Interaction/media icons
 
@@ -26,17 +26,20 @@ Location: [`public/anubi-assets/_next/static/media`](public/anubi-assets/_next/s
 - `frame-corners.ae3cebd2.svg`
 
 Intended usage:
+
 - media controls and interactive visual overlays in future motion parity pass.
 
 ### Font binaries
 
 - Multiple `.woff2` files (`011e...`, `2053...`, `5356...`, etc.)
+
 Intended usage:
+
 - local font hosting fallback if switching away from Google Fonts imports.
 
-## 2) Extracted Content Imagery (Sanity CDN)
+## 2) Content imagery (local CDN mirror)
 
-Location: [`public/assets/anubi-cdn`](public/assets/anubi-cdn)
+Location: [`public/assets/media-cdn`](public/assets/media-cdn)
 
 Representative groups:
 
@@ -58,15 +61,17 @@ Representative groups:
   - `ee147091...-300x300-w240.png`
 
 Current usage:
-- homepage + work listing cards
-- file: [`src/app/page.tsx`](src/app/page.tsx)
-- file: [`src/app/work/all/page.tsx`](src/app/work/all/page.tsx)
 
-## 3) Placeholder Replacement Pack
+- homepage + work listing cards
+- file: [`src/app/page.tsx`](../src/app/page.tsx)
+- file: [`src/app/work/all/page.tsx`](../src/app/work/all/page.tsx)
+
+## 3) Placeholder replacement pack
 
 Location: [`public/assets/work`](public/assets/work)
 
 Files:
+
 - `diadora-utility.svg`
 - `essilor-luxottica.svg`
 - `efferalgan-tv-commercial.svg`
@@ -75,25 +80,28 @@ Files:
 - `mullet-tea-can-launch.svg`
 
 Purpose:
+
 - temporary placeholders only; keep for quick fallback and custom replacement workflow.
 
-## 4) Favicons / Platform Icons
+## 4) Favicons / platform icons
 
-Location: [`public/anubi-assets`](public/anubi-assets)
+Location: [`public/brand-assets`](public/brand-assets)
 
 Includes:
+
 - `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `favicon-96x96.png`
 - `apple-icon-*.png`, `android-icon-192x192.png`
 - `manifest.json`
 
 Intended usage:
+
 - final metadata and PWA icon parity pass.
 
-## 5) Asset Replacement Rules
+## 5) Asset replacement rules
 
 - Prefer replacing by filename-in-place to avoid code churn.
 - Keep image dimensions/aspect consistent to preserve layout fidelity.
 - For future custom branding:
-  1. Replace in `public/assets/anubi-cdn` for content realism.
-  2. Replace in `public/anubi-assets/_next/static/media` for brand/system icons.
+  1. Replace in `public/assets/media-cdn` for content realism.
+  2. Replace in `public/brand-assets/_next/static/media` for brand/system icons.
   3. Update references only when file naming must change.

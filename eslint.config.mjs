@@ -12,7 +12,7 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    "public/anubi-assets/**",
+    "public/brand-assets/**",
   ]),
 ]);
 

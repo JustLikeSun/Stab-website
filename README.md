@@ -1,10 +1,10 @@
 # Stab website
 
-Next.js site (anubi.io–style layout and interactions). Repository: [github.com/JustLikeSun/Stab-website](https://github.com/JustLikeSun/Stab-website).
+Next.js site for **Stab** (creative agency). Repository: [github.com/JustLikeSun/Stab-website](https://github.com/JustLikeSun/Stab-website).
 
 ## Develop
 
-From the **repository root** (the folder that contains `package.json` — e.g. `stab-website` on your machine, not a nested `anubi-next` path):
+From the **repository root** (the folder that contains `package.json` — e.g. `stab-website` on your machine, not a nested subfolder from an old layout):
 
 ```bash
 npm install
@@ -29,7 +29,7 @@ npm start
 
 DNS is working when requests reach Vercel (you see `server: Vercel` and often a redirect from apex → `www`). If the site shows **“The page could not be found”** / **`NOT_FOUND`**, the domain is not backed by a **successful Production deployment** for this repo—usually a dashboard setting, not app code.
 
-1. **Project → Settings → General → Root Directory** — leave **empty** (repo root). If it still says `anubi-next` from an old layout, builds fail and nothing is served on your domain.
+1. **Project → Settings → General → Root Directory** — leave **empty** (repo root). If it still points at a removed subfolder from an old layout, builds fail and nothing is served on your domain.
 2. **Deployments** — open the latest **Production** deploy; it must be **Ready** (green). If it’s failed, read the build log (missing `package.json` / wrong root is the common fix).
 3. **Settings → Domains** — `stab.agency` and `www.stab.agency` must be on **this** project and show **Valid**.
 4. After fixing root directory, click **Redeploy** on the latest commit (or push an empty commit) so Production updates.
@@ -41,7 +41,7 @@ Your `*.vercel.app` preview URL should return **200** for `/` when the project i
 | Path | Purpose |
 |------|---------|
 | `src/` | Next.js App Router app and components |
-| `public/` | Static assets (anubi-assets mirror, CDN imagery) |
+| `public/` | Static assets (`brand-assets`, `media-cdn`, etc.) |
 | `docs/` | Internal notes (e.g. asset manifest) |
 | `legacy/` | Optional local static mirror; **gitignored**, not in the remote repo |
 

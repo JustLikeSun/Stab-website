@@ -27,8 +27,8 @@ export type WorkAllLandingCardProps = {
 const CIRCLE_K = 130;
 
 /**
- * anubi.io/work/all landing cards: clip-path circle reveal + parallax, blur timeline on base layer.
- * landingStyle (no custom cursor) — see work/all chunk GSAP.
+ * Work index landing cards: clip-path circle reveal + parallax, blur timeline on base layer.
+ * landingStyle (no custom cursor) — GSAP-driven.
  */
 export function WorkAllLandingCard({
   href,
