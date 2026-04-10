@@ -3,17 +3,9 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { KineticText } from "@/components/kinetic-text";
-
-const clients = [
-  { name: "Diadora", logo: "/assets/anubi-cdn/67bfc75ca60d0bcf8b9387f3a3bd2ae55a9556c1-300x300-w240.png" },
-  { name: "AW LAB", logo: "/assets/anubi-cdn/719f7bb29f703c93a55f0db43734ab519371379b-300x300-w240.png" },
-  { name: "Kering Eyewear", logo: "/assets/anubi-cdn/721e7a8edc02f273e194a3c93295363d70599ea3-300x300-w240.png" },
-  { name: "Emporio Armani", logo: "/assets/anubi-cdn/7ce24ba657b887ce3bbdb57d7c240e47f84aa32b-300x300-w240.png" },
-  { name: "Converse", logo: "/assets/anubi-cdn/9fa416606a72318a7edc522b55089846cc4997fd-300x300-w240.png" },
-  { name: "UPSA", logo: "/assets/anubi-cdn/d956f475d7ad350394a2e84852b8a333e3b49589-300x300-w240.png" },
-  { name: "Luxottica", logo: "/assets/anubi-cdn/ee1470912265d170550873df7651cd8f7ddbb5cc-300x300-w240.png" },
-];
+import { ClientsStrip } from "@/components/clients-strip";
+import { ContactCtaButton } from "@/components/contact-cta-button";
+import { KineticLines } from "@/components/kinetic-lines";
 
 const services: [string, string][] = [
   ["Animation", "Motion systems, launch films and branded moving image."],
@@ -27,12 +19,12 @@ const services: [string, string][] = [
 ];
 
 const work = [
-  { title: "Diadora Utility", tag: "CGI", image: "/assets/anubi-cdn/e1f43059cf31ae783ea72963fb14ae39ee0677cf-1920x1080-w1920.png", large: true },
-  { title: "Essilor Luxottica", tag: "3D Animation", image: "/assets/anubi-cdn/214c2c0f506856bd35ef95a80d0731889e54c518-1920x1080-w1920.webp", large: false },
-  { title: "Efferalgan - TV Commercial", tag: "Advertising", image: "/assets/anubi-cdn/735130d2e9f05a3af36bd1c2106cc3cd8bd07e84-3840x2160-w3200.png", large: false },
-  { title: "UPSA x NOURISHED - Gummies", tag: "Commercial / Advertising", image: "/assets/anubi-cdn/ab8fadeb12bdd710c924bfe7ed9f1d0402a8cc4d-2700x2160-w2200.png", large: true },
-  { title: "Converse Cherry - AW LAB", tag: "Art Direction", image: "/assets/anubi-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png", large: false },
-  { title: "Mullet Tea - Can Launch", tag: "Art Direction", image: "/assets/anubi-cdn/ac1f57d527cde045557bf70ed044e9c7dc79bf38-1920x1080-w1920.png", large: false },
+  { slug: "diadora-utility", title: "Diadora Utility", tag: "CGI", image: "/assets/anubi-cdn/e1f43059cf31ae783ea72963fb14ae39ee0677cf-1920x1080-w1920.png", large: true },
+  { slug: "essilor-luxottica", title: "Essilor Luxottica", tag: "3D Animation", image: "/assets/anubi-cdn/214c2c0f506856bd35ef95a80d0731889e54c518-1920x1080-w1920.webp", large: false },
+  { slug: "efferalgan-tv-commercial", title: "Efferalgan - TV Commercial", tag: "Advertising", image: "/assets/anubi-cdn/735130d2e9f05a3af36bd1c2106cc3cd8bd07e84-3840x2160-w3200.png", large: false },
+  { slug: "upsa-x-nourished-gummies", title: "UPSA x NOURISHED - Gummies", tag: "Commercial / Advertising", image: "/assets/anubi-cdn/ab8fadeb12bdd710c924bfe7ed9f1d0402a8cc4d-2700x2160-w2200.png", large: true },
+  { slug: "converse-cherry-aw-lab", title: "Converse Cherry - AW LAB", tag: "Art Direction", image: "/assets/anubi-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png", large: false },
+  { slug: "mullet-tea-can-launch", title: "Mullet Tea - Can Launch", tag: "Art Direction", image: "/assets/anubi-cdn/ac1f57d527cde045557bf70ed044e9c7dc79bf38-1920x1080-w1920.png", large: false },
 ];
 
 export default function Home() {
@@ -87,49 +79,19 @@ export default function Home() {
       {/* ────────── BENTO HERO ────────── */}
       <section className="bento-container">
         <div className="bento-grid">
-          {/* Header row */}
-          <div
-            className="grid-card bento-header-card"
-            style={{ "--col-desktop": "1/13", "--row-desktop": "1/2", "--col-tablet": "1/7", "--col-mobile": "1/5" } as React.CSSProperties}
-          >
-            <div className="bento-header-content">
-              <Link href="/" className="bento-logo-link">
-                <Image src="/anubi-assets/_next/static/media/anubi.00dff3f2.svg" alt="" width={32} height={32} className="bento-logo-icon" />
-                <div className="bento-brand">
-                  <span className="bento-brand-name">Anubi</span>
-                  <span className="bento-brand-tagline">Creative Studio</span>
-                </div>
-              </Link>
-              <nav className="bento-nav">
-                <Link href="/code" className="bento-nav-link">Code</Link>
-                <Link href="/lab" className="bento-nav-link">Lab</Link>
-                <Link href="/work/all" className="bento-nav-link">Work</Link>
-                <Link href="/contact" className="bento-nav-link bento-nav-accent">Contact</Link>
-              </nav>
-            </div>
-          </div>
-
-          {/* Kinetic / ANUBI wordmark (particle animation) */}
+          {/* Kinetic / ANUBI: dot field + lens (canvas) + vector mark (overlay), like anubi.io */}
           <div
             className="grid-card premium kinetic-card"
-            style={{ "--col-desktop": "1/7", "--row-desktop": "2/4", "--col-tablet": "1/7", "--col-mobile": "1/5" } as React.CSSProperties}
+            style={{ "--col-desktop": "1/7", "--row-desktop": "1/3", "--col-tablet": "1/7", "--col-mobile": "1/5" } as React.CSSProperties}
           >
-            <KineticText
-              text="ANUBI"
-              className="kinetic-canvas"
-              particleColor="#0a0a0a"
-              particleSize={1.8}
-              density={3}
-              mouseRadius={90}
-              mouseForce={0.18}
-            />
+            <KineticLines />
           </div>
 
           {/* Hero text */}
           <div
             ref={heroRef}
             className="grid-card hero-card"
-            style={{ "--col-desktop": "1/7", "--row-desktop": "4/11", "--col-tablet": "1/7", "--col-mobile": "1/5" } as React.CSSProperties}
+            style={{ "--col-desktop": "1/7", "--row-desktop": "3/10", "--col-tablet": "1/7", "--col-mobile": "1/5" } as React.CSSProperties}
           >
             <div className="hero-text">
               <h1 className="hero-title">
@@ -161,7 +123,7 @@ export default function Home() {
           {/* Video / media */}
           <div
             className="grid-card video-card"
-            style={{ "--col-desktop": "7/13", "--row-desktop": "2/8", "--col-tablet": "1/7", "--col-mobile": "1/5" } as React.CSSProperties}
+            style={{ "--col-desktop": "7/13", "--row-desktop": "1/7", "--col-tablet": "1/7", "--col-mobile": "1/5" } as React.CSSProperties}
           >
             <Image
               src="/assets/anubi-cdn/3103b9b8e7c4e822b4209498da605892f8ea9955-1920x1080-w1920.png"
@@ -176,7 +138,7 @@ export default function Home() {
           {/* Action: Selected Work */}
           <div
             className="grid-card interactive premium action-card"
-            style={{ "--col-desktop": "7/10", "--row-desktop": "8/11", "--col-tablet": "1/4", "--col-mobile": "1/3" } as React.CSSProperties}
+            style={{ "--col-desktop": "7/10", "--row-desktop": "7/10", "--col-tablet": "1/4", "--col-mobile": "1/3" } as React.CSSProperties}
           >
             <Link href="/work/all" className="action-link">
               <div className="action-indicator"><span className="action-arrow">↗</span></div>
@@ -190,7 +152,7 @@ export default function Home() {
           {/* Action: Contact */}
           <div
             className="grid-card interactive accent action-card"
-            style={{ "--col-desktop": "10/13", "--row-desktop": "8/11", "--col-tablet": "4/7", "--col-mobile": "3/5" } as React.CSSProperties}
+            style={{ "--col-desktop": "10/13", "--row-desktop": "7/10", "--col-tablet": "4/7", "--col-mobile": "3/5" } as React.CSSProperties}
           >
             <Link href="/contact" className="action-link">
               <div className="action-indicator"><span className="action-arrow light">↗</span></div>
@@ -204,28 +166,14 @@ export default function Home() {
       </section>
 
       {/* ────────── CLIENTS ────────── */}
-      <section className="clients-section reveal">
-        <div className="page-container">
-          <div className="sec-header">
-            <span className="sec-rule" />
-            <p className="sec-label">Clients</p>
-          </div>
-          <div className="clients-row">
-            {clients.map((c) => (
-              <div key={c.name} className="client-item">
-                <Image src={c.logo} alt={c.name} width={48} height={48} unoptimized />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ClientsStrip />
 
       {/* ────────── SERVICES ────────── */}
       <section className="services-section reveal">
         <div className="services-container">
           <div className="sec-header">
             <span className="sec-rule light" />
-            <p className="sec-label light">Services</p>
+            <p className="sec-label light">Creative production studio</p>
           </div>
           <div className="services-hero-grid">
             <div className="services-hero-left">
@@ -264,7 +212,7 @@ export default function Home() {
           </div>
           <div className="work-grid">
             {work.map((item, i) => (
-              <Link key={item.title} href="/work/all" className={`work-card${item.large ? " work-card-large" : ""}`} aria-label={`View project: ${item.title}`}>
+              <Link key={item.title} href={`/work/${item.slug}`} className={`work-card${item.large ? " work-card-large" : ""}`} aria-label={`View project: ${item.title}`}>
                 <div className="work-media">
                   <Image src={item.image} alt={item.title} fill style={{ objectFit: "cover" }} unoptimized />
                 </div>
@@ -330,7 +278,7 @@ export default function Home() {
         <div className="contact-inner">
           <h2 className="contact-title">Let&apos;s work together.</h2>
           <div className="contact-cta-wrap">
-            <Link href="/contact" className="contact-btn">Contact us</Link>
+            <ContactCtaButton />
           </div>
           <div className="contact-alt">
             <p className="contact-alt-title">or reach out via email at</p>

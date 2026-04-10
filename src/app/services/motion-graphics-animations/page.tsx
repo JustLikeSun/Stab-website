@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ContactCtaButton } from "@/components/contact-cta-button";
 
 const capabilities = [
   ["Brand films", "Motion-led films for product launches, campaigns and social that combine direction, design and editorial rhythm."],
@@ -87,7 +88,9 @@ export default function ServiceMotionPage() {
       <section className="contact-section reveal">
         <div className="page-container contact-inner">
           <h2 className="contact-title">Let&apos;s work together.</h2>
-          <Link href="/contact" className="contact-btn">Contact us</Link>
+          <div className="contact-cta-wrap">
+            <ContactCtaButton />
+          </div>
           <p className="contact-email">or reach out via email at <a href="mailto:hello@anubi.io">hello@anubi.io</a></p>
         </div>
       </section>

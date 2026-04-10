@@ -1,74 +1,150 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const budgetOptions = ["Not specified", "2K-5K", "5K-10K", "10K-20K", "20K-50K", "50K+"];
 
 export default function ContactPage() {
   const [budget, setBudget] = useState("Not specified");
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    const nodes = Array.from(document.querySelectorAll(".contact-page .reveal"));
+    const io = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-visible");
+            io.unobserve(e.target);
+          }
+        }),
+      { threshold: 0.12 }
+    );
+    nodes.forEach((n) => io.observe(n));
+    return () => io.disconnect();
+  }, [submitted]);
 
   return (
-    <main>
-      {/* Hero */}
-      <section className="inner-section light inner-hero" style={{ textAlign: "center" }}>
-        <div className="page-container">
-          <p className="sec-label" style={{ marginBottom: 16, display: "block" }}>CONTACT US AT</p>
-          <h1 className="contact-title" style={{ marginBottom: 12 }}>hello@anubi.io</h1>
-          <p className="page-subtitle">or fill out the form</p>
+    <main className="contact-page">
+      <div className="contact-page-shell">
+        <div className="contact-page-bg" aria-hidden>
+          <div className="contact-page-bg-blob" />
         </div>
-      </section>
 
-      {/* Form */}
-      <section className="inner-section light" style={{ paddingTop: 0 }}>
-        <div className="page-container" style={{ maxWidth: 720 }}>
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-            <div className="form-row form-row-2">
-              <div className="form-group">
-                <label className="form-label">NAME *</label>
-                <input type="text" className="form-input" placeholder="Your Name" required />
-              </div>
-              <div className="form-group">
-                <label className="form-label">COMPANY / PROJECT</label>
-                <input type="text" className="form-input" placeholder="Company or Project Name" />
-              </div>
+        {!submitted ? (
+          <>
+            <div className="contact-page-sendmail reveal">
+              <p className="contact-page-kicker">Contact us at</p>
+              <a href="mailto:hello@anubi.io" className="contact-page-mail">
+                hello@anubi.io
+              </a>
+              <p className="contact-page-sub">or fill out the form</p>
             </div>
-            <div className="form-group">
-              <label className="form-label">EMAIL *</label>
-              <input type="email" className="form-input" placeholder="your@email.com" required />
+
+            <div className="contact-page-form-outer reveal">
+              <form
+                className="contact-page-form"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  setSubmitted(true);
+                }}
+              >
+                <div className="contact-page-input-row">
+                  <div className="contact-page-input-col">
+                    <label className="contact-page-label" htmlFor="contact-name">
+                      Name<span className="contact-page-req">*</span>
+                    </label>
+                    <input
+                      id="contact-name"
+                      type="text"
+                      className="contact-page-input"
+                      placeholder="Your name"
+                      required
+                      autoComplete="name"
+                    />
+                  </div>
+                  <div className="contact-page-input-col">
+                    <label className="contact-page-label" htmlFor="contact-company">
+                      Company / Project
+                    </label>
+                    <input
+                      id="contact-company"
+                      type="text"
+                      className="contact-page-input"
+                      placeholder="Company or project name"
+                      autoComplete="organization"
+                    />
+                  </div>
+                </div>
+
+                <label className="contact-page-label" htmlFor="contact-email">
+                  Email<span className="contact-page-req">*</span>
+                </label>
+                <input
+                  id="contact-email"
+                  type="email"
+                  className="contact-page-input"
+                  placeholder="your@email.com"
+                  required
+                  autoComplete="email"
+                />
+
+                <label className="contact-page-label" htmlFor="contact-subject">
+                  Subject<span className="contact-page-req">*</span>
+                </label>
+                <input
+                  id="contact-subject"
+                  type="text"
+                  className="contact-page-input"
+                  placeholder="What do you need?"
+                  required
+                />
+
+                <span className="contact-page-label">Budget</span>
+                <div className="contact-page-budget-row" role="group" aria-label="Budget">
+                  {budgetOptions.map((b) => (
+                    <button
+                      key={b}
+                      type="button"
+                      className={`contact-page-budget-btn${budget === b ? " is-selected" : ""}`}
+                      onClick={() => setBudget(b)}
+                    >
+                      <span className="contact-page-budget-text">{b}</span>
+                    </button>
+                  ))}
+                </div>
+
+                <label className="contact-page-label" htmlFor="contact-message">
+                  Message<span className="contact-page-req">*</span>
+                </label>
+                <textarea
+                  id="contact-message"
+                  className="contact-page-textarea"
+                  placeholder="Describe your project or question."
+                  rows={6}
+                  required
+                />
+
+                <label className="contact-page-checkbox">
+                  <input type="checkbox" required />
+                  <span className="contact-page-checkbox-text">
+                    I have read and agree to the <a href="#">Privacy Policy</a>
+                  </span>
+                </label>
+
+                <button type="submit" className="contact-page-submit">
+                  Send
+                </button>
+              </form>
             </div>
-            <div className="form-group">
-              <label className="form-label">SUBJECT *</label>
-              <input type="text" className="form-input" placeholder="What do you need?" required />
-            </div>
-            <div className="form-group">
-              <label className="form-label">BUDGET</label>
-              <div className="budget-row">
-                {budgetOptions.map((b) => (
-                  <button
-                    key={b}
-                    type="button"
-                    className={`budget-btn ${budget === b ? "active" : ""}`}
-                    onClick={() => setBudget(b)}
-                  >
-                    {b}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div className="form-group">
-              <label className="form-label">MESSAGE *</label>
-              <textarea className="form-textarea" placeholder="Describe your needs here." rows={6} required />
-            </div>
-            <div className="form-group">
-              <label className="form-checkbox">
-                <input type="checkbox" required />
-                <span>I have read and agree to the <a href="#">Privacy Policy</a></span>
-              </label>
-            </div>
-            <button type="submit" className="form-submit">SEND</button>
-          </form>
-        </div>
-      </section>
+          </>
+        ) : (
+          <div className="contact-page-thanks reveal is-visible">
+            <p className="contact-page-thanks-line">Thank you for reaching out.</p>
+            <p className="contact-page-thanks-line">We will get back to you as soon as possible.</p>
+          </div>
+        )}
+      </div>
     </main>
   );
 }

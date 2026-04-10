@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# Old static mirror (local only; not part of the Next app)
+/legacy/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

@@ -7,19 +7,7 @@ import Image from "next/image";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    let prev = window.scrollY;
-    const onScroll = () => {
-      const next = window.scrollY;
-      setHidden(next > prev && next > 96);
-      prev = next;
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     if (open) document.body.classList.add("lock-scroll");
@@ -29,14 +17,16 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className={`mobile-header ${hidden ? "is-hidden" : ""}`}>
+      <header className="site-header mobile-header">
         <div className="mobile-header-inner">
+          <div className="mobile-header-shelf">
           <Link href="/" className="mobile-header-logo" aria-label="Home">
             <Image
               src="/anubi-assets/_next/static/media/anubi.00dff3f2.svg"
               alt=""
-              width={24}
-              height={24}
+              width={32}
+              height={32}
+              className="site-header-mark"
             />
             <span className="header-brand">
               <span className="header-brand-name">Anubi</span>
@@ -45,7 +35,6 @@ export function SiteHeader() {
           </Link>
           <nav className="header-desktop-nav">
             <Link href="/code" className={`header-nav-link ${pathname.startsWith("/code") ? "active" : ""}`}>Code</Link>
-            <Link href="/lab" className={`header-nav-link ${pathname.startsWith("/lab") ? "active" : ""}`}>Lab</Link>
             <Link href="/work/all" className={`header-nav-link ${pathname.startsWith("/work") ? "active" : ""}`}>Work</Link>
             <Link href="/contact" className={`header-nav-link header-nav-accent ${pathname.startsWith("/contact") ? "active" : ""}`}>Contact</Link>
           </nav>
@@ -59,6 +48,7 @@ export function SiteHeader() {
             <span className={`burger-line burger-mid ${open ? "open" : ""}`} />
             <span className={`burger-line burger-bot ${open ? "open" : ""}`} />
           </button>
+          </div>
         </div>
       </header>
 
@@ -68,7 +58,6 @@ export function SiteHeader() {
             <div className="mobile-menu-links">
               <Link href="/" onClick={() => setOpen(false)}>Home</Link>
               <Link href="/code" onClick={() => setOpen(false)}>Code</Link>
-              <Link href="/lab" onClick={() => setOpen(false)}>Lab</Link>
               <Link href="/work/all" onClick={() => setOpen(false)}>Work</Link>
               <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
             </div>

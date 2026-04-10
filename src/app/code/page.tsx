@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ClientsStrip } from "@/components/clients-strip";
+import { ContactCtaButton } from "@/components/contact-cta-button";
 
 const capabilities = [
   ["Creative websites", "Brand sites, landing pages and editorial experiences designed for clarity and emotional impact, motion and technical SEO."],
@@ -11,16 +13,6 @@ const capabilities = [
   ["Management tools", "Internal dashboards, configurators, quote management tools and operational tools for businesses."],
   ["Performance", "Careful rendering, media strategy and interaction design to keep premium experiences fast and stable."],
   ["Analytics", "Measurement plans, event tracking and reporting foundations that show how people discover, navigate and respond to the experience."],
-];
-
-const clients = [
-  { name: "Diadora", logo: "/assets/anubi-cdn/67bfc75ca60d0bcf8b9387f3a3bd2ae55a9556c1-300x300-w240.png" },
-  { name: "AW LAB", logo: "/assets/anubi-cdn/719f7bb29f703c93a55f0db43734ab519371379b-300x300-w240.png" },
-  { name: "Kering Eyewear", logo: "/assets/anubi-cdn/721e7a8edc02f273e194a3c93295363d70599ea3-300x300-w240.png" },
-  { name: "Emporio Armani", logo: "/assets/anubi-cdn/7ce24ba657b887ce3bbdb57d7c240e47f84aa32b-300x300-w240.png" },
-  { name: "Converse", logo: "/assets/anubi-cdn/9fa416606a72318a7edc522b55089846cc4997fd-300x300-w240.png" },
-  { name: "UPSA", logo: "/assets/anubi-cdn/d956f475d7ad350394a2e84852b8a333e3b49589-300x300-w240.png" },
-  { name: "Luxottica", logo: "/assets/anubi-cdn/ee1470912265d170550873df7651cd8f7ddbb5cc-300x300-w240.png" },
 ];
 
 export default function CodePage() {
@@ -127,7 +119,7 @@ export default function CodePage() {
             <span className="sec-rule" />
             <p className="sec-label">Selected Work</p>
           </div>
-          <Link href="/work/all" className="work-card" style={{ display: "block", maxWidth: 800 }}>
+          <Link href="/work/red-studio-creative-website" className="work-card" style={{ display: "block", maxWidth: 800 }}>
             <Image
               src="/assets/anubi-cdn/5337f568925cf43e80caeaa1611dab578d90f0d1-3072x1728-w2200.webp"
               alt="Code project"
@@ -174,28 +166,15 @@ export default function CodePage() {
         </div>
       </section>
 
-      {/* Clients */}
-      <section className="clients-section reveal">
-        <div className="page-container">
-          <div className="sec-header">
-            <span className="sec-rule" />
-            <p className="sec-label">Clients</p>
-          </div>
-          <div className="clients-row">
-            {clients.map((c) => (
-              <div key={c.name} className="client-item">
-                <Image src={c.logo} alt={c.name} width={48} height={48} unoptimized />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ClientsStrip />
 
       {/* Contact CTA */}
       <section className="contact-section reveal">
         <div className="page-container contact-inner">
           <h2 className="contact-title">Let&apos;s work together.</h2>
-          <Link href="/contact" className="contact-btn">Contact us</Link>
+          <div className="contact-cta-wrap">
+            <ContactCtaButton />
+          </div>
           <p className="contact-email">or reach out via email at <a href="mailto:hello@anubi.io">hello@anubi.io</a></p>
         </div>
       </section>

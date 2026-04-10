@@ -10,7 +10,6 @@ export function SiteFooter() {
           <nav className="footer-nav">
             <Link href="/">Home</Link>
             <Link href="/code">Code</Link>
-            <Link href="/lab">Lab</Link>
             <Link href="/work/all">Work</Link>
             <Link href="/contact">Contact</Link>
           </nav>

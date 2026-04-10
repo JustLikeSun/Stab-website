@@ -4,17 +4,17 @@ This manifest maps extracted assets to current and intended usage in the rebuild
 
 ## 1) Brand / UI System Assets
 
-Location: [`/Users/sunny/Desktop/stab-website/anubi-next/public/anubi-assets/_next/static/media`](/Users/sunny/Desktop/stab-website/anubi-next/public/anubi-assets/_next/static/media)
+Location: [`public/anubi-assets/_next/static/media`](public/anubi-assets/_next/static/media)
 
 ### Brand marks
 
 - `anubi.00dff3f2.svg`
   - Current usage: header brand icon
-  - File: [`/Users/sunny/Desktop/stab-website/anubi-next/src/components/site-header.tsx`](/Users/sunny/Desktop/stab-website/anubi-next/src/components/site-header.tsx)
+  - File: [`src/components/site-header.tsx`](src/components/site-header.tsx)
 
 - `anubi-footer.9e2d2407.svg`
   - Current usage: footer brand lockup
-  - File: [`/Users/sunny/Desktop/stab-website/anubi-next/src/components/site-footer.tsx`](/Users/sunny/Desktop/stab-website/anubi-next/src/components/site-footer.tsx)
+  - File: [`src/components/site-footer.tsx`](src/components/site-footer.tsx)
 
 ### Interaction/media icons
 
@@ -36,7 +36,7 @@ Intended usage:
 
 ## 2) Extracted Content Imagery (Sanity CDN)
 
-Location: [`/Users/sunny/Desktop/stab-website/anubi-next/public/assets/anubi-cdn`](/Users/sunny/Desktop/stab-website/anubi-next/public/assets/anubi-cdn)
+Location: [`public/assets/anubi-cdn`](public/assets/anubi-cdn)
 
 Representative groups:
 
@@ -59,12 +59,12 @@ Representative groups:
 
 Current usage:
 - homepage + work listing cards
-- file: [`/Users/sunny/Desktop/stab-website/anubi-next/src/app/page.tsx`](/Users/sunny/Desktop/stab-website/anubi-next/src/app/page.tsx)
-- file: [`/Users/sunny/Desktop/stab-website/anubi-next/src/app/work/all/page.tsx`](/Users/sunny/Desktop/stab-website/anubi-next/src/app/work/all/page.tsx)
+- file: [`src/app/page.tsx`](src/app/page.tsx)
+- file: [`src/app/work/all/page.tsx`](src/app/work/all/page.tsx)
 
 ## 3) Placeholder Replacement Pack
 
-Location: [`/Users/sunny/Desktop/stab-website/anubi-next/public/assets/work`](/Users/sunny/Desktop/stab-website/anubi-next/public/assets/work)
+Location: [`public/assets/work`](public/assets/work)
 
 Files:
 - `diadora-utility.svg`
@@ -79,7 +79,7 @@ Purpose:
 
 ## 4) Favicons / Platform Icons
 
-Location: [`/Users/sunny/Desktop/stab-website/anubi-next/public/anubi-assets`](/Users/sunny/Desktop/stab-website/anubi-next/public/anubi-assets)
+Location: [`public/anubi-assets`](public/anubi-assets)
 
 Includes:
 - `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `favicon-96x96.png`
