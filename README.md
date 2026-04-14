@@ -42,6 +42,12 @@ The `/contact` form sends email through [Resend](https://resend.com). Copy `.env
 
 Add the same variables under **Vercel → Project → Settings → Environment Variables** for Production (and Preview if you want forms on preview deploys).
 
+### Coming soon mode
+
+To hide the full site while you revise content, set **`COMING_SOON=1`** or **`NEXT_PUBLIC_COMING_SOON=1`** in **Vercel → Environment Variables** (Production), then **redeploy**. Redirects are applied at **`next build`** time via `next.config.ts` (not middleware), so the flag must be present when Vercel builds and you must redeploy after changing it. `/`, `/code`, `/work/…`, etc. redirect to **`/coming-soon`**; **`/_next`**, **`/brand-assets`**, **`/assets`**, and **`favicon.ico`** are not redirected so the splash can load. The coming soon screen is **full black** with no site header/footer (it lives outside the `(site)` layout).
+
+To go back to the full site: remove those variables or set them to **`0`**, then **redeploy** so the next build bakes in “no redirects.”
+
 ---
 
 ## Scripts
