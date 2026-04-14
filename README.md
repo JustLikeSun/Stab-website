@@ -42,6 +42,10 @@ The `/contact` form sends email through [Resend](https://resend.com). Copy `.env
 
 Add the same variables under **Vercel → Project → Settings → Environment Variables** for Production (and Preview if you want forms on preview deploys).
 
+### Coming soon mode
+
+To hide the full site while you revise content, set **`COMING_SOON=1`** in **Vercel → Environment Variables** (Production), then redeploy. All routes redirect to **`/coming-soon`** except static assets. Remove the variable or set it to **`0`**, redeploy, and the full site is back. Locally, add `COMING_SOON=1` to `.env.local` to test.
+
 ---
 
 ## Scripts
