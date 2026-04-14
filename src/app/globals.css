@@ -2265,6 +2265,26 @@ button { font: inherit; }
   transform: none;
 }
 
+.contact-page-honeypot {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.contact-page-form-error {
+  color: #8b1538;
+  font-family: var(--text-font);
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 0 0 8px;
+}
+
 .contact-page-thanks {
   margin: 0 auto;
   max-width: 36ch;
@@ -2285,6 +2305,162 @@ button { font: inherit; }
 
 .contact-page-thanks-line:last-child {
   margin-bottom: 0;
+}
+
+.privacy-page {
+  background: var(--color-bg-light);
+  color: var(--color-black);
+  min-height: 60vh;
+  padding: calc(var(--header-height) + 32px) 24px 64px;
+}
+
+.privacy-page-inner {
+  margin: 0 auto;
+  max-width: var(--page-max-width);
+  width: var(--page-width);
+}
+
+.privacy-page-kicker {
+  font-family: var(--text-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+}
+
+.privacy-page-kicker a {
+  color: var(--color-darkgrey);
+  text-decoration: underline;
+}
+
+.privacy-page-title {
+  font-family: var(--text-fancy);
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0 0 20px;
+  max-width: 20ch;
+}
+
+.privacy-page-brand {
+  font-weight: 600;
+}
+
+.privacy-page-lead {
+  font-family: var(--text-font);
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  line-height: 1.6;
+  margin: 0 0 40px;
+  max-width: 68ch;
+}
+
+.privacy-page-lead a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.privacy-section {
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.privacy-h2 {
+  font-family: var(--text-fancy);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 28px;
+  max-width: 40ch;
+}
+
+.privacy-service {
+  border-top: 1px solid var(--color-lightgrey);
+  padding: 22px 0 8px;
+}
+
+.privacy-section .privacy-service:last-child {
+  border-bottom: 1px solid var(--color-lightgrey);
+  margin-bottom: 8px;
+  padding-bottom: 22px;
+}
+
+.privacy-h3 {
+  font-family: var(--text-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.privacy-service-detail {
+  font-family: var(--text-font);
+  font-size: clamp(0.98rem, 1.25vw, 1.05rem);
+  line-height: 1.58;
+  margin: 0 0 12px;
+  max-width: 72ch;
+}
+
+.privacy-service-detail:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-page-copy {
+  font-family: var(--text-font);
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  line-height: 1.58;
+  margin: 0;
+  max-width: 68ch;
+}
+
+.privacy-page-copy a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.privacy-contact-list {
+  font-family: var(--text-font);
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  line-height: 1.65;
+  list-style: none;
+  margin: 0;
+  max-width: 68ch;
+  padding: 0;
+}
+
+.privacy-contact-list li {
+  margin: 0;
+}
+
+.privacy-contact-list a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.privacy-page-updated {
+  font-family: var(--text-font);
+  font-size: 15px;
+  line-height: 1.5;
+  margin: clamp(28px, 4vw, 40px) 0 16px;
+}
+
+.privacy-page-note {
+  color: var(--color-darkgrey);
+  font-family: var(--text-font);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 68ch;
+}
+
+.privacy-page-note a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* ═══════════════════════════════════════════════════════
