@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "vercel": "vercel",
-    "vercel:pull": "vercel pull --yes --environment=production"
+    "vercel:pull": "vercel pull --yes --environment=production",
+    "vercel:sync-env": "node scripts/sync-vercel-env.mjs"
   },
   "dependencies": {
     "gsap": "^3.14.2",
