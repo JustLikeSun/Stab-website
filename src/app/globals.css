@@ -2491,14 +2491,6 @@ html:has(.coming-soon-root) body {
   max-width: 36rem;
 }
 
-.coming-soon-mark-wrap {
-  margin: 0 auto 28px;
-}
-
-.coming-soon-mark {
-  filter: invert(1);
-}
-
 .coming-soon-eyebrow {
   color: rgba(255, 255, 255, 0.55);
   font-family: var(--text-mono);
