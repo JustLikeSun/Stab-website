@@ -44,9 +44,9 @@ Add the same variables under **Vercel → Project → Settings → Environment V
 
 ### Coming soon mode
 
-To hide the full site while you revise content, set **`COMING_SOON=1`** and **`NEXT_PUBLIC_COMING_SOON=1`** in **Vercel → Environment Variables** (Production), then **redeploy**. The Edge middleware needs both so the redirect is reliable; all routes (including `/`) go to **`/coming-soon`** except static assets. The coming soon screen is **full black** with no header or footer (it lives outside the main layout shell).
+To hide the full site while you revise content, set **`COMING_SOON=1`** or **`NEXT_PUBLIC_COMING_SOON=1`** in **Vercel → Environment Variables** (Production), then **redeploy**. Redirects are applied at **`next build`** time via `next.config.ts` (not middleware), so the flag must be present when Vercel builds and you must redeploy after changing it. `/`, `/code`, `/work/…`, etc. redirect to **`/coming-soon`**; **`/_next`**, **`/brand-assets`**, **`/assets`**, and **`favicon.ico`** are not redirected so the splash can load. The coming soon screen is **full black** with no site header/footer (it lives outside the `(site)` layout).
 
-To go back to the full site: remove both variables or set them to **`0`**, redeploy. Locally, mirror the same keys in `.env.local` to test.
+To go back to the full site: remove those variables or set them to **`0`**, then **redeploy** so the next build bakes in “no redirects.”
 
 ---
 
