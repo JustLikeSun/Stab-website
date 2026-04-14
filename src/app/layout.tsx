@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Epilogue, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import { PageTransition } from "@/components/page-transition";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -39,12 +36,7 @@ export default function RootLayout({
       lang="en"
       className={`${bricolage.variable} ${epilogue.variable} ${ibmPlexMono.variable}`}
     >
-      <body>
-        <PageTransition />
-        <SiteHeader />
-        {children}
-        <SiteFooter />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

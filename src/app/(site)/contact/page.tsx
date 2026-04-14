@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState, useEffect, useState } from "react";
-import { submitContact, type ContactState } from "@/app/contact/actions";
+import { submitContact, type ContactState } from "@/app/(site)/contact/actions";
 
 const budgetOptions = ["Not specified", "2K-5K", "5K-10K", "10K-20K", "20K-50K", "50K+"];
 

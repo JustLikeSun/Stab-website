@@ -16,6 +16,7 @@ export default function ComingSoonPage() {
       <div className="coming-soon-inner">
         <div className="coming-soon-mark-wrap">
           <Image
+            className="coming-soon-mark"
             src="/brand-assets/_next/static/media/stab-mark.00dff3f2.svg"
             alt=""
             width={72}

@@ -1,13 +1,26 @@
 import { type NextRequest, NextResponse } from "next/server";
 
+function isComingSoonMode(): boolean {
+  const a = process.env.COMING_SOON?.trim();
+  const b = process.env.NEXT_PUBLIC_COMING_SOON?.trim();
+  return (
+    a === "1" ||
+    a === "true" ||
+    b === "1" ||
+    b === "true"
+  );
+}
+
 /**
- * When COMING_SOON=1, all routes redirect to /coming-soon (except static assets).
- * Set in Vercel Environment Variables; omit or set to 0 for a normal site.
+ * When COMING_SOON or NEXT_PUBLIC_COMING_SOON is 1/true, all routes redirect to
+ * /coming-soon (except static assets). Set in Vercel Environment Variables.
+ * Using NEXT_PUBLIC_* ensures the flag is available in the Edge bundle; redeploy after toggling.
  */
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const pathname = request.nextUrl.pathname.replace(/\/$/, "") || "/";
+  const comingSoon = isComingSoonMode();
 
-  if (process.env.COMING_SOON !== "1") {
+  if (!comingSoon) {
     if (pathname === "/coming-soon") {
       return NextResponse.redirect(new URL("/", request.url));
     }
@@ -38,5 +51,11 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image).*)"],
+  matcher: [
+    "/",
+    /*
+     * Match the rest of paths except Next internals (omit root — see above).
+     */
+    "/((?!_next/static|_next/image|favicon.ico).+)",
+  ],
 };

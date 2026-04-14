@@ -44,7 +44,9 @@ Add the same variables under **Vercel → Project → Settings → Environment V
 
 ### Coming soon mode
 
-To hide the full site while you revise content, set **`COMING_SOON=1`** in **Vercel → Environment Variables** (Production), then redeploy. All routes redirect to **`/coming-soon`** except static assets. Remove the variable or set it to **`0`**, redeploy, and the full site is back. Locally, add `COMING_SOON=1` to `.env.local` to test.
+To hide the full site while you revise content, set **`COMING_SOON=1`** and **`NEXT_PUBLIC_COMING_SOON=1`** in **Vercel → Environment Variables** (Production), then **redeploy**. The Edge middleware needs both so the redirect is reliable; all routes (including `/`) go to **`/coming-soon`** except static assets. The coming soon screen is **full black** with no header or footer (it lives outside the main layout shell).
+
+To go back to the full site: remove both variables or set them to **`0`**, redeploy. Locally, mirror the same keys in `.env.local` to test.
 
 ---
 

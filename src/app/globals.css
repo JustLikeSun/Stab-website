@@ -2464,22 +2464,23 @@ button { font: inherit; }
 }
 
 /* ═══════════════════════════════════════════════════════
-   COMING SOON (middleware redirects here when COMING_SOON=1)
+   COMING SOON (standalone route: no site chrome in layout)
    ═══════════════════════════════════════════════════════ */
 
-html:has(.coming-soon-root) .page-transition-root,
-html:has(.coming-soon-root) .site-header,
-html:has(.coming-soon-root) .site-footer {
-  display: none !important;
+html:has(.coming-soon-root),
+html:has(.coming-soon-root) body {
+  background: #000;
+  min-height: 100%;
 }
 
 .coming-soon-root {
   align-items: center;
-  background: var(--color-bg-light);
+  background: #000;
   box-sizing: border-box;
-  color: var(--color-black);
+  color: #fff;
   display: flex;
   justify-content: center;
+  margin: 0;
   min-height: 100dvh;
   padding: 48px 24px 64px;
   text-align: center;
@@ -2492,11 +2493,14 @@ html:has(.coming-soon-root) .site-footer {
 
 .coming-soon-mark-wrap {
   margin: 0 auto 28px;
-  opacity: 0.92;
+}
+
+.coming-soon-mark {
+  filter: invert(1);
 }
 
 .coming-soon-eyebrow {
-  color: var(--color-darkgrey);
+  color: rgba(255, 255, 255, 0.55);
   font-family: var(--text-mono);
   font-size: 12px;
   letter-spacing: 0.2em;
@@ -2505,6 +2509,7 @@ html:has(.coming-soon-root) .site-footer {
 }
 
 .coming-soon-title {
+  color: #fff;
   font-family: var(--text-fancy);
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 500;
@@ -2514,6 +2519,7 @@ html:has(.coming-soon-root) .site-footer {
 }
 
 .coming-soon-lead {
+  color: rgba(255, 255, 255, 0.82);
   font-family: var(--text-font);
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   line-height: 1.6;
@@ -2521,7 +2527,7 @@ html:has(.coming-soon-root) .site-footer {
 }
 
 .coming-soon-link {
-  color: inherit;
+  color: #fff;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
